@@ -22,16 +22,20 @@ logo = Image.open("logo.png")
 # HEADER
 # =========================
 
-col1, col2 = st.columns([1.5, 5])
+main_col1, main_col2 = st.columns([2, 5])
 
-with col1:
+with main_col1:
 
-    st.image(
-        logo,
-        width=180
-    )
+    left_space, logo_col, right_space = st.columns([1, 3, 1])
 
-with col2:
+    with logo_col:
+
+        st.image(
+            logo,
+            width=220
+        )
+
+with main_col2:
 
     st.title(
         "Telecom Customer Churn Prediction"
@@ -330,14 +334,14 @@ if df is not None:
 
     ).sum()
 
-    col1, col2 = st.columns(2)
+    metric_col1, metric_col2 = st.columns(2)
 
-    col1.metric(
+    metric_col1.metric(
         "Churn Customer",
         churn_count
     )
 
-    col2.metric(
+    metric_col2.metric(
         "Stay Customer",
         stay_count
     )
