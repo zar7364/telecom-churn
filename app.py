@@ -75,10 +75,19 @@ st.write(
     """
 )
 
+# =========================
+# TEMPLATE DOWNLOAD
+# =========================
+
+template_link = "https://docs.google.com/spreadsheets/d/1B3Yhlpe167CwdUSdOYFJho8v-ZK4cMc3/edit?usp=sharing&ouid=112776330850723540409&rtpof=true&sd=true"
+
 st.info(
-    """
+    f"""
     Upload data customer sendiri (.xlsx) dengan format kolom 
-    yang sesuai seperti dataset asli pada link Maven Analytics.
+    yang sesuai seperti dataset asli pada Maven Analytics.
+
+    Template Data:
+    {template_link}
     """
 )
 
